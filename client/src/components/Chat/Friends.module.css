@@ -1,0 +1,77 @@
+.container {
+  display: grid;
+  height: 100%;
+  grid-template-rows: 12% 88%;
+  gap: 1rem;
+  overflow: hidden;
+  background-color: #080420;
+}
+.friends {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: auto;
+  gap: 0.8rem;
+}
+.friends::-webkit-scrollbar {
+  width: 0.2rem;
+}
+.friends::-webkit-scrollbar-thumb {
+  background-color: #ffffff39;
+  width: 0.1rem;
+  border-radius: 1rem;
+}
+.friends .friend {
+  background-color: #ffffff34;
+  min-height: 5rem;
+  cursor: pointer;
+  width: 90%;
+  border-radius: 0.2rem;
+  padding: 0.4rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  transition: 0.5s ease-in-out;
+}
+.friends .friend:last-child {
+  margin-bottom: 1.5rem;
+}
+.friends .friend .avatar img {
+  height: 3rem;
+}
+.friends .friend h3 {
+  color: white;
+  font-family: cursive;
+  letter-spacing: 1px;
+}
+.friends .friend p {
+  color: #acacac;
+}
+.friends .selected {
+  background-color: #9a86f3;
+}
+
+.currentUser {
+  background-color: #0d0d30;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 13% 67% 13%;
+  gap: 0.5rem;
+  align-items: center;
+}
+.currentUser .username h2 {
+  color: white;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media only screen and (max-width: 900px) {
+  .container {
+    display: relative;
+  }
+  .currentUser {
+    gap: 0.5rem;
+  }
+  .current-user .username h2 {
+    font-size: 1rem;
+  }
+}
